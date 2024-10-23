@@ -5,7 +5,7 @@
 class Greenfra < Formula
   desc "Estimate the environmental impact of your infrastructure change within your Terraform projects!"
   homepage "https://github.com/Donovan1905/Greenfra"
-  version "0.3.0"
+  version "0.4.0"
 
   depends_on "elvish" => :optional
   depends_on "fish" => "v1.2.3"
@@ -14,24 +14,24 @@ class Greenfra < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/Donovan1905/greenfra/releases/download/v0.3.0/Greenfra_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/Donovan1905/greenfra/releases/download/v0.4.0/Greenfra_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "3ccd231eb7b60daa5ce16001f7c73c25f0dee5c9ff6633927c6a7c2c5f378ab8"
+      sha256 "570a5dfd782a69a6ceae1d067cd8213d9e787ba8712e53b907f4f9af07f3a65b"
 
       def install
         bin.install "Greenfra"
       end
     end
     on_arm do
-      url "https://github.com/Donovan1905/greenfra/releases/download/v0.3.0/Greenfra_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/Donovan1905/greenfra/releases/download/v0.4.0/Greenfra_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "01b2ba2ff3645b29a78833dbe162dfe96eebd50ae78026f72f8a57a35bbabf6e"
+      sha256 "ef540cfe7cdf40c42e099b81ac5d9f3df191ce68296fa91de46ab59e94692b08"
 
       def install
         bin.install "Greenfra"
@@ -42,12 +42,12 @@ class Greenfra < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Donovan1905/greenfra/releases/download/v0.3.0/Greenfra_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/Donovan1905/greenfra/releases/download/v0.4.0/Greenfra_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "e7e548d9977f8f3806ddfd6d6e6c4fc77176b2d4c934bc33c99c2b9b0780155f"
+        sha256 "b2281d091b817bea29dc3cf7ca87db06689c198ef960706a25b71a52dc98392e"
 
         def install
           bin.install "Greenfra"
@@ -56,12 +56,12 @@ class Greenfra < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Donovan1905/greenfra/releases/download/v0.3.0/Greenfra_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/Donovan1905/greenfra/releases/download/v0.4.0/Greenfra_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "4bf1106a60b225975247dc2f912815f180b23655a7ba2b2548040d63cdd5b6ed"
+        sha256 "6a2190bd4b04bc08aad1db9485a2bab477da19bd1563f22d1cf6372b9df9e852"
 
         def install
           bin.install "Greenfra"
